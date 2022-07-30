@@ -127,7 +127,7 @@ app.get("/text/sentiment", (req,res) => {
     }
     const naturalLanguageUnderstanding = getNLUInstance();
     naturalLanguageUnderstanding.analyze(analyzeParams)
-    .then(analyzsisResults => {
+    .then(analysisResults => {
         return res.send(analysisResults.result.keywords[0].sentiment,null,2);
     })
     .catch(err => {
